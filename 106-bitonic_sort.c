@@ -46,9 +46,9 @@ void bitonic_sort_recursive(int *array, size_t low, size_t count, int dir)
         printf("Merging [%lu/%lu] (%s):\n", count, count, dir ? "UP" : "DOWN");
         print_array(array + low, count);
 
-        bitonic_sort_recursive(array, low, k, 1);     // Bitonic sort on the first half
-        bitonic_sort_recursive(array, low + k, k, 0); // Bitonic sort on the second half
-        bitonic_merge(array, low, count, dir);         // Merge the whole sequence
+        bitonic_sort_recursive(array, low, k, 1);
+        bitonic_sort_recursive(array, low + k, k, 0);
+        bitonic_merge(array, low, count, dir);
     }
 }
 
