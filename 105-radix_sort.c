@@ -1,6 +1,4 @@
 #include "sort.h"
-#include <stdlib.h>
-
 /**
  * getMax - Get the maximum value in an array
  * @array: The array
