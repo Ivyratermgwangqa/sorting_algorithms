@@ -10,20 +10,20 @@
  */
 void merge_sub(int *subarray, int *buffer, size_t lo, size_t mid, size_t hi)
 {
-  size_t low;
-  size_t midi;
+	size_t low;
+	size_t midi;
 	size_t a = 0;
 
-	printf("Merging...\n[left]: ");
+	/* Print subarrays for debugging */
+	/* printf("Merging...\n[left]: ");
 	print_array(subarray + lo, mid - lo);
-
 	printf("[Right]: ");
-	print_array(subarray + mid, hi - mid);
+	print_array(subarray + mid, hi - mid); */
 
 	for (low = lo, midi = mid; low < mid && midi < hi; a++)
-  {
-    if (subarray[low] < subarray[midi])
-    {
+	{
+		if (subarray[low] < subarray[midi])
+		{
 			buffer[a] = subarray[low++];
 		}
 		else
@@ -43,8 +43,9 @@ void merge_sub(int *subarray, int *buffer, size_t lo, size_t mid, size_t hi)
 	{
 		subarray[low] = buffer[a++];
 	}
-	printf("[Done]: ");
-	print_array(subarray + lo, hi - lo);
+	/* Print merged subarray for debugging */
+	/* printf("[Done]: ");
+	print_array(subarray + lo, hi - lo); */
 }
 
 /**
